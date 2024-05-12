@@ -34,6 +34,8 @@ public class BlockHit : MonoBehaviour
         }
 
         StartCoroutine(Animate());
+
+        //GameManager.Instance.AddCoin();
     }
 
     private IEnumerator Animate()

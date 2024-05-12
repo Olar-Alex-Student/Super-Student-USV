@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
     {
         Application.targetFrameRate = 60;
 
-        NewGame();
+        lives = 3;
+        coins = 0;
     }
 
     public void NewGame()
@@ -44,17 +45,22 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        // TODO: show game over screen
-
-        NewGame();
+        SceneManager.LoadScene($"GameOver");
     }
 
     public void LoadLevel(int world, int stage)
     {
-        this.world = world;
-        this.stage = stage;
+        if(stage == -1)
+        {
+            SceneManager.LoadScene($"WinGame");
+        }
+        else
+        {
+            this.world = world;
+            this.stage = stage;
 
-        SceneManager.LoadScene($"{world}-{stage}");
+            SceneManager.LoadScene($"{world}-{stage}");
+        }
     }
 
     public void NextLevel()
@@ -71,6 +77,7 @@ public class GameManager : MonoBehaviour
     public void ResetLevel()
     {
         lives--;
+        coins = 0;
 
         if (lives > 0) {
             LoadLevel(world, stage);

@@ -85,7 +85,7 @@ PrefabInstance:
       objectReference: {fileID: 2949561940459812151, guid: c64b1a2f6e1d51e4db28cd1337fefc09, type: 3}
     - target: {fileID: 4953937513092463115, guid: ae74545fba894724092dcceb2c7895ac, type: 3}
       propertyPath: m_Name
-      value: Goomba
+      value: Profesor
       objectReference: {fileID: 0}
     - target: {fileID: 7896048874926067572, guid: ae74545fba894724092dcceb2c7895ac, type: 3}
       propertyPath: deadSprite
@@ -204,6 +204,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8081761, y: -0.2276216}
-  m_Size: {x: 1.3237648, y: 6.600987}
+  m_Offset: {x: 0.8081761, y: -0.22762853}
+  m_Size: {x: 1.3237648, y: 6.601001}
   m_Direction: 0
